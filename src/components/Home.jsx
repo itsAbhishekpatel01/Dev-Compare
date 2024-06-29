@@ -23,6 +23,11 @@ const Home = () => {
             CodeChef Profile Compare
           </button>
         </Link>
+        <Link to="/testing">
+          <button className="bg-teal-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600">
+            Testing
+          </button>
+        </Link>
       </div>
     </div>
   );

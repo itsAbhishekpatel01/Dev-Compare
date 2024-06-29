@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import CodeforcesProfileCompare from "./components/CodeforcesProfileCompare";
 import LeetCodeProfileCompare from "./components/LeetCodeProfileCompare";
 import CodeChefProfileCompare from "./components/CodeChefProfileCompare";
+import Testing from "./components/Testing";
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/codeforces" element={<CodeforcesProfileCompare />} />
         <Route path="/leetcode" element={<LeetCodeProfileCompare />} />
         <Route path="/codechef" element={<CodeChefProfileCompare/>} />
+        <Route path="/testing" element={<Testing/>} />
       </Routes>
     </Router>
   );
