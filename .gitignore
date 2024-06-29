@@ -22,3 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+/Users/abhishekpatel/Desktop/coding-profile-analyser git/src/components/Testing.jsx

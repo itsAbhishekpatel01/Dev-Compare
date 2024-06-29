@@ -32,8 +32,8 @@ function bestWorstRank(ratingList) {
 
 const CodeforcesProfileCompare = () => {
 
-    const [handle1, setHandle1] = useState("itsAbhishek");
-    const [handle2, setHandle2] = useState("mhtkrag");
+    const [handle1, setHandle1] = useState("");
+    const [handle2, setHandle2] = useState("");
     const [error, setError] = useState("");
     const [user1, setUser1] = useState(0);
     const [user2, setUser2] = useState(0);
