@@ -642,8 +642,8 @@ useEffect(() => {
         }
 
         const data7 = google.visualization.arrayToDataTable(ratingData);
-        const chart7 = new google.visualization.ColumnChart(document.getElementById('rating'));
-        chart7.draw(data7, options7);
+       // const chart7 = new google.visualization.ColumnChart(document.getElementById('rating'));
+        //chart7.draw(data7, options7);
 
 
     }
@@ -783,13 +783,13 @@ return (
                     ></Paper>
                 </Box>
 
-                <Box className="flex justify-center overflow-x-auto mx-7 rounded-lg">
+                {/* <Box className="flex justify-center overflow-x-auto mx-7 rounded-lg">
                     <Paper
                         elevation={5}
                         id="rating"
                         className="h-96 my-3 w-screen md:w-4/5 shadow-lg rounded-lg"
                     ></Paper>
-                </Box>
+                </Box> */}
 
             </div>}
         </Box>
