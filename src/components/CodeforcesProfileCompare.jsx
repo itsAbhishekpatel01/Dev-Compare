@@ -124,6 +124,29 @@ const CodeforcesProfileCompare = () => {
         }
     }
 
+// useEffect(() => {
+//     google.charts.load('current', { packages: ['corechart'] });
+
+//     function drawRatingChart() {
+//         const data = google.visualization.arrayToDataTable([
+//             ['RatingType', user1.handle, user2.handle],
+//             ['Current Rating', user1.rating, user2.rating],
+//             ['Max Rating', user1.maxRating, user2.maxRating],
+//             ['Min Rating', rating1[0].newRating, rating2[0].newRating],
+//         ]);
+
+//         const options = {
+//             legend: { position: 'top', alignment: 'end' },
+//             bar: { groupWidth: '40%' },
+//             vAxis: { minValue: 0 }
+//         };
+
+//         const chart = new google.visualization.ColumnChart(document.getElementById('ratingChart'));
+//         chart.draw(data, options);
+//     }
+//     if (user1.rating && user2.rating && rating1 && rating2) drawRatingChart();
+// }, [user1, user2, rating1, rating2]);
+const [theme, setTheme] = useState('light');
 useEffect(() => {
     google.charts.load('current', { packages: ['corechart'] });
 
@@ -135,17 +158,50 @@ useEffect(() => {
             ['Min Rating', rating1[0].newRating, rating2[0].newRating],
         ]);
 
-        const options = {
-            legend: { position: 'top', alignment: 'end' },
+        const lightModeOptions = {
+            legend: { position: 'top', alignment: 'end', textStyle: { color: '#000000' } },
             bar: { groupWidth: '40%' },
-            vAxis: { minValue: 0 }
+            vAxis: { 
+                minValue: 0,
+                textStyle: { color: '#000000' }, 
+                gridlines: { color: '#e0e0e0' },
+                baselineColor: '#9e9e9e' 
+            },
+            hAxis: {
+                textStyle: { color: '#000000' },
+            },
+            backgroundColor: '#ffffff',
+            chartArea: { backgroundColor: '#ffffff' },
+            colors: ['#1e88e5', '#8e24aa'], // Bright blue and purple
+            titleTextStyle: { color: '#000000' },
         };
+
+        const darkModeOptions = {
+            legend: { position: 'top', alignment: 'end', textStyle: { color: '#e0e0e0' } },
+            bar: { groupWidth: '40%' },
+            vAxis: { 
+                minValue: 0,
+                textStyle: { color: '#e0e0e0' }, 
+                gridlines: { color: '#424242' },
+                baselineColor: '#616161' 
+            },
+            hAxis: {
+                textStyle: { color: '#e0e0e0' },
+            },
+            backgroundColor: '#121212',
+            chartArea: { backgroundColor: '#121212' },
+            colors: ['#64b5f6', '#bb86fc'], // Modern blue and purple
+            titleTextStyle: { color: '#e0e0e0' },
+        };
+
+        const options = theme === 'dark' ? darkModeOptions : lightModeOptions;
 
         const chart = new google.visualization.ColumnChart(document.getElementById('ratingChart'));
         chart.draw(data, options);
     }
+
     if (user1.rating && user2.rating && rating1 && rating2) drawRatingChart();
-}, [user1, user2, rating1, rating2]);
+}, [user1, user2, rating1, rating2, theme]);
 
 //Contest Charts
 useEffect(() => {
@@ -655,7 +711,8 @@ useEffect(() => {
 return (
     <>
         <Box
-            className="bg-gradient-to-br from-yellow-200  via-blue-200 to-red-600 font-sans min-h-screen">
+            className="bg-gradient-to-r from-[#29323c] to-[#485563] font-sans min-h-screen mb-4">
+            mb={4}
             <Box className="flex flex-col items-center">
                 <Typography
                     variant="h3"
@@ -698,6 +755,7 @@ return (
                     size="large"
                     sx={{ px: 5 }}
                 >Fetch</Button>
+
             </Box>
 
             {/* All chart parent div */}

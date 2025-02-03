@@ -5,6 +5,7 @@ import CodeforcesProfileCompare from "./components/CodeforcesProfileCompare";
 import LeetCodeProfileCompare from "./components/LeetCodeProfileCompare";
 import CodeChefProfileCompare from "./components/CodeChefProfileCompare";
 import Testing from "./components/Testing";
+import Navbar from "./components/Navbar";
 
 
 
@@ -19,6 +20,7 @@ export const data = [
 const App = () => {
   return (
     <Router>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/codeforces" element={<CodeforcesProfileCompare />} />

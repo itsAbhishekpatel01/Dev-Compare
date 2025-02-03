@@ -34,11 +34,13 @@ const CodeforcesProfileCompare = () => {
     };
 
     return (
-        <div className="flex flex-col items-center min-h-screen bg-gradient-to-br from-gray-200 to-gray-300 font-sans">
-            <h1 className="text-3xl font-bold text-center mt-8 mb-6 text-gray-800 shadow-md">
+        <div className="flex pt-10 flex-col items-center min-h-screen bg-gradient-to-r from-[#29323c] to-[#485563] font-sans">
+            <h1 className="text-4xl font-bold text-center mt-8 mb-6 ">
                 LeetCode Profile Analyzer
             </h1>
-            <label className="mb-2">Enter LeetCode Handle </label>
+            <label className="block text-lg mb-2">
+                Enter LeetCode Handle
+            </label>
             <div className="flex gap-4 mb-4">
                 <input
                     type="text"
