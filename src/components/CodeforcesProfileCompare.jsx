@@ -655,8 +655,8 @@ useEffect(() => {
 return (
     <>
         <Box
-            className="bg-gradient-to-br from-yellow-200  via-blue-200 to-red-600 font-sans min-h-screen">
-            <Box className="flex flex-col items-center">
+            className="bg-gradient-to-t from-[#09203f] to-[#537895] font-sans min-h-screen">
+            <Box className="flex flex-col items-center" pt={4}>
                 <Typography
                     variant="h3"
                     mt={6}

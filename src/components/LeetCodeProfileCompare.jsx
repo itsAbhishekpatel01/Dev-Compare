@@ -13,7 +13,6 @@ const CodeforcesProfileCompare = () => {
             return;
         }
         setError("");
-
         try {
             const response1 = await fetch(
                 `https://leetcode-api-faisalshohag.vercel.app/${handle1}`
@@ -34,7 +33,7 @@ const CodeforcesProfileCompare = () => {
     };
 
     return (
-        <div className="flex flex-col items-center min-h-screen bg-gradient-to-br from-gray-200 to-gray-300 font-sans">
+        <div className="flex pt-10 flex-col items-center min-h-screen bg-gradient-to-t from-[#09203f] to-[#537895] font-sans">
             <h1 className="text-3xl font-bold text-center mt-8 mb-6 text-gray-800 shadow-md">
                 LeetCode Profile Analyzer
             </h1>
