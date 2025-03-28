@@ -6,29 +6,8 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { Button, CardContent } from "@mui/material";
 import { Card, Paper, Typography, Box, TextField } from '@mui/material';
+import { bestWorstRank, maxRatingChange } from "../lib/codeforcesHelper";
 
-
-function maxRatingChange(ratingList) {
-    //returns an array - [maxUp, maxDown]
-    let ans = [0, 5000];
-    ratingList.forEach(element => {
-        if (element.oldRating < element.newRating)
-            ans[0] = Math.max(ans[0], element.newRating - element.oldRating);
-        else
-            ans[1] = Math.min(ans[1], element.newRating - element.oldRating)
-    });
-    return ans;
-}
-
-function bestWorstRank(ratingList) {
-    //returns an array - [BestRank, WorstRank]
-    let rank = [1000000, 1];
-    ratingList.forEach(element => {
-        rank[0] = Math.min(rank[0], element.rank);
-        rank[1] = Math.max(rank[1], element.rank);
-    });
-    return rank;
-}
 
 const CodeforcesProfileCompare = () => {
 
@@ -301,40 +280,6 @@ useEffect(() => {
         });
         console.log(arr);
 
-        // while (i < n && j < m) {
-        //     const time1 = rating1[i].ratingUpdateTimeSeconds;
-        //     const time2 = rating2[j].ratingUpdateTimeSeconds;
-        //     if (time1 === time2) {
-        //         user1LastRating = rating1[i].newRating;
-        //         user2LastRating = rating2[j].newRating;
-        //         arr.push([time1, user1LastRating, user2LastRating]);
-        //         i++; j++;
-        //     }
-        //     else if (time1 < time2) {
-        //         user1LastRating = rating1[i].newRating;
-        //         arr.push([time1, user1LastRating, user2LastRating]);
-        //         i++;
-        //     }
-        //     else {
-        //         user2LastRating = rating2[j].newRating;
-        //         arr.push([time2, user1LastRating, user2LastRating]);
-        //         j++;
-        //     }
-        // }
-        // while (i < n) {
-        //     const time1 = rating1[i].ratingUpdateTimeSeconds;
-        //     user1LastRating = rating1[i].newRating;
-        //     i++;
-        //     arr.push([time1, user1LastRating, user2LastRating]);
-        // }
-        // while (j < m) {
-        //     const time2 = rating2[j].ratingUpdateTimeSeconds;
-        //     user2LastRating = rating2[j].newRating;
-        //     j++;
-        //     arr.push([time2, user1LastRating, user2LastRating]);
-        // }
-
-        // console.log(arr);
 
         const n = arr.length;
         for (let i = 0; i < n; i++) {
@@ -642,9 +587,6 @@ useEffect(() => {
         }
 
         const data7 = google.visualization.arrayToDataTable(ratingData);
-       // const chart7 = new google.visualization.ColumnChart(document.getElementById('rating'));
-        //chart7.draw(data7, options7);
-
 
     }
     if (submission1 && submission2 && user1 && user2 && contestList) drawTriedSolvedChart();
