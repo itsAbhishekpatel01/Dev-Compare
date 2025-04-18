@@ -16,11 +16,13 @@
     "@mui/material": "^5.15.21",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@shadcn/ui": "^0.0.4",
+    "cors": "^2.8.5",
     "lucide-react": "^0.485.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-google-charts": "^4.0.1",
     "react-router-dom": "^6.23.1",
+    "recharts": "^2.15.2",
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
