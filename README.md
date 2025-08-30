@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="public/vite.svg" alt="Dev-Compare Logo" width="120"/>
+  <img src="public/logo.png" alt="Dev-Compare Logo" width="120"/>
 </p>
 
 # Dev-Compare
@@ -37,6 +37,10 @@ Dev-Compare is a modern web application that allows users to view and compare th
 ```
 Dev-Compare/
 ├── public/
+│   ├── logo.png
+│   ├── home.png
+│   ├── cf.png
+│   ├── lc.png
 │   └── vite.svg
 ├── src/
 │   ├── App.jsx
@@ -69,8 +73,13 @@ Dev-Compare/
 
 ## 🖥️ Screenshots
 <p align="center">
-  <img src="https://placehold.co/600x400?text=Home+Page" alt="Home Page"/>
-  <img src="https://placehold.co/600x400?text=Profile+Comparison" alt="Profile Comparison"/>
+  <img src="public/home.png" alt="Home Page" width="500"/>
+</p>
+<p align="center">
+  <img src="public/cf.png" alt="Codeforces Comparison" width="500"/>
+</p>
+<p align="center">
+  <img src="public/lc.png" alt="LeetCode Comparison" width="500"/>
 </p>
 
 ---
